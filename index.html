@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Interactive Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">LearnHub</div>
+
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('lessons')">Lessons</a>
+            <a href="#" onclick="showPage('quiz')">Quiz</a>
+        </div>
+    </nav>
+
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+
+        <div class="hero">
+            <div>
+                <p class="small-title">WELCOME TO LEARNHUB</p>
+
+                <h1>
+                    Learn. Practice.<br>
+                    Improve.
+                </h1>
+
+                <p>
+                    An interactive learning website where students
+                    can study lessons and test their knowledge.
+                </p>
+
+                <button onclick="showPage('lessons')">
+                    Start Learning
+                </button>
+            </div>
+        </div>
+
+        <div class="features">
+
+            <div class="feature-card">
+                <h2>3</h2>
+                <p>Lessons</p>
+            </div>
+
+            <div class="feature-card">
+                <h2>5</h2>
+                <p>Quiz Questions</p>
+            </div>
+
+            <div class="feature-card">
+                <h2>Beginner</h2>
+                <p>Difficulty</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSONS PAGE -->
+    <section id="lessons" class="page">
+
+        <div class="page-title">
+            <p>COURSE CONTENT</p>
+            <h1>Lessons</h1>
+            <span>Choose a lesson to start learning.</span>
+        </div>
+
+        <div class="lesson-container">
+
+            <div class="lesson-card">
+
+                <div class="lesson-number">01</div>
+
+                <h2>Introduction to HTML</h2>
+
+                <p>
+                    Learn the basic structure of a website
+                    using HTML.
+                </p>
+
+                <span class="lesson-level">Beginner • 15 min</span>
+
+                <button onclick="openLesson(1)">
+                    Start Lesson
+                </button>
+
+            </div>
+
+
+            <div class="lesson-card">
+
+                <div class="lesson-number">02</div>
+
+                <h2>CSS Fundamentals</h2>
+
+                <p>
+                    Learn how CSS controls colors, fonts,
+                    spacing and layouts.
+                </p>
+
+                <span class="lesson-level">Beginner • 20 min</span>
+
+                <button onclick="openLesson(2)">
+                    Start Lesson
+                </button>
+
+            </div>
+
+
+            <div class="lesson-card">
+
+                <div class="lesson-number">03</div>
+
+                <h2>JavaScript Basics</h2>
+
+                <p>
+                    Learn how JavaScript makes websites
+                    interactive.
+                </p>
+
+                <span class="lesson-level">Beginner • 25 min</span>
+
+                <button onclick="openLesson(3)">
+                    Start Lesson
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON DETAILS -->
+    <section id="lessonDetails" class="page">
+
+        <div class="lesson-content">
+
+            <button class="back-button" onclick="showPage('lessons')">
+                ← Back to Lessons
+            </button>
+
+            <p class="small-title">LESSON</p>
+
+            <h1 id="lessonTitle">
+                Introduction to HTML
+            </h1>
+
+            <p id="lessonDescription"></p>
+
+            <h2>What You Will Learn</h2>
+
+            <ul id="lessonTopics"></ul>
+
+            <h2>Lesson</h2>
+
+            <p id="lessonText"></p>
+
+            <h2>Example</h2>
+
+            <pre id="lessonExample"></pre>
+
+            <button onclick="showPage('quiz')">
+                Take the Quiz
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ PAGE -->
+    <section id="quiz" class="page">
+
+        <div class="quiz-container">
+
+            <div class="page-title">
+                <p>KNOWLEDGE CHECK</p>
+                <h1>Quiz</h1>
+                <span>Test what you have learned.</span>
+            </div>
+
+            <div id="quizQuestions"></div>
+
+            <button
+                id="submitButton"
+                onclick="submitQuiz()">
+                Submit Quiz
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTS PAGE -->
+    <section id="results" class="page">
+
+        <div class="result-card">
+
+            <p class="small-title">QUIZ COMPLETE</p>
+
+            <h1>Quiz Results</h1>
+
+            <div class="score" id="score">
+                0/5
+            </div>
+
+            <p id="percentage">
+                0%
+            </p>
+
+            <h2 id="resultMessage">
+                Keep practicing!
+            </h2>
+
+            <button onclick="showPage('quiz')">
+                Retake Quiz
+            </button>
+
+            <button
+                class="secondary-button"
+                onclick="showPage('lessons')">
+                Back to Lessons
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 LearnHub | Interactive Learning Website</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
